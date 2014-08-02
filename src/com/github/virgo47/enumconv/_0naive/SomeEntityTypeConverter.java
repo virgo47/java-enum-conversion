@@ -7,7 +7,6 @@ import javax.persistence.AttributeConverter;
  * That's a big STOP (and think) sign in any case.
  */
 public class SomeEntityTypeConverter implements AttributeConverter<SomeEntityType, Integer> {
-
 	@Override
 	public Integer convertToDatabaseColumn(SomeEntityType someEntityType) {
 		switch (someEntityType) {

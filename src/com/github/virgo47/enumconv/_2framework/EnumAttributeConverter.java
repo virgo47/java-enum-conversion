@@ -21,7 +21,7 @@ public abstract class EnumAttributeConverter<X extends ConvertedEnum<Y>, Y>
 
 	public X notNull(X x, Y dbValue) {
 		if (x == null) {
-			throw new IllegalArgumentException("No enum constant" + (dbValue != null ? (" for DB value " + dbValue) : ""));
+			throw new IllegalArgumentException("No enum constant " + (dbValue != null ? (" for DB value " + dbValue) : ""));
 		}
 
 		return x;

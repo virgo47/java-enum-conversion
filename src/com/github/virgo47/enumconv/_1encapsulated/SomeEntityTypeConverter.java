@@ -3,7 +3,6 @@ package com.github.virgo47.enumconv._1encapsulated;
 import javax.persistence.AttributeConverter;
 
 public class SomeEntityTypeConverter implements AttributeConverter<SomeEntityType, Integer> {
-
 	@Override
 	public Integer convertToDatabaseColumn(SomeEntityType someEntityType) {
 		return someEntityType.toDbValue();

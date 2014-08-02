@@ -4,7 +4,7 @@ java-enum-conversion
 Java enum conversion micro-framework demonstration. Focus is on the way how to map enum instances to
 values and how to do it consistently. Examples are all based on JPA 2.1 converters.
 
-Full length blog story is here: 
+Full length blog story is here: http://virgo47.wordpress.com/2014/08/02/converting-java-enums-to-values-and-back/
 
 ## Naive approach
 

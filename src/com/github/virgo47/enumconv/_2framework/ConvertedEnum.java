@@ -9,6 +9,5 @@ package com.github.virgo47.enumconv._2framework;
  * Check {@link EnumAttributeConverter} for helper methods that can be used during reverse conversion.
  */
 public interface ConvertedEnum<Y> {
-
 	Y toDbValue();
 }
