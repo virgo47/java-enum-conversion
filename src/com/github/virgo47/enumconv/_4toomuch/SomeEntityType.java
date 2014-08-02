@@ -1,7 +1,4 @@
-package com.github.virgo47.enumconv._2framework;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.github.virgo47.enumconv._4toomuch;
 
 public enum SomeEntityType implements ConvertedEnum<Integer> {
 	NORMAL(0),
@@ -19,15 +16,9 @@ public enum SomeEntityType implements ConvertedEnum<Integer> {
 	}
 
 	// static resolving:
-	public static final Map<Integer, SomeEntityType> dbValues = new HashMap<>();
-
-	static {
-		for (SomeEntityType value : values()) {
-			dbValues.put(value.dbValue, value);
-		}
-	}
+	public static final ConvertedEnumResolver<SomeEntityType, Integer> resolver = new ConvertedEnumResolver<>(SomeEntityType.class);
 
 	public static SomeEntityType fromDbValue(Integer dbValue) {
-		return dbValues.get(dbValue);
+		return resolver.get(dbValue);
 	}
 }

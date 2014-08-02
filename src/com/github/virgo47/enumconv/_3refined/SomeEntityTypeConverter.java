@@ -1,8 +1,8 @@
-package com.github.virgo47.enumconv._2framework;
+package com.github.virgo47.enumconv._3refined;
 
 public class SomeEntityTypeConverter extends EnumAttributeConverter<SomeEntityType, Integer> {
 	@Override
 	public SomeEntityType convertToEntityAttribute(Integer integer) {
-		return notNull(SomeEntityType.fromDbValue(integer));
+		return SomeEntityType.fromDbValue(integer);
 	}
 }

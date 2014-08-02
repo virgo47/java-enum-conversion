@@ -9,22 +9,19 @@ public enum SomeEntityType {
 
 	// ENUM -> DB VALUE CONVERSION
 	// first part is easy and most programmers get here
-	// fields are not final, but you better make them
+	// fields are not final implicitly, but we better make them
 	private final Integer dbValue;
 
 	private SomeEntityType(Integer dbValue) {
 		this.dbValue = dbValue;
 	}
 
-	public Integer getDbValue() {
+	public Integer toDbValue() {
 		return dbValue;
 	}
 
-	// this helps enum->Integer mapping, but we want the other way too
-
 	// DB VALUE -> ENUM CONVERSION
 	// static reverse resolving:
-
 	public static final Map<Integer, SomeEntityType> dbValues = new HashMap<>();
 
 	static {
