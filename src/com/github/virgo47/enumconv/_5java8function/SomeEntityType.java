@@ -2,7 +2,6 @@ package com.github.virgo47.enumconv._5java8function;
 
 /**
  * Now we don't need to implement any interface for the sake of conversion/reverse resolving itself.
- * We omitted the JPA surroundings but
  */
 public enum SomeEntityType {
 	NORMAL(0, "norm"),
