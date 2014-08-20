@@ -33,4 +33,20 @@ Package `_4toomuch` tries to push even more to base converter class. There is de
 save a single line of code and lost compile time safety for static `fromDbValue` method (no way
 to enforce the same name on all enums) I'd not go this far.
 
+## More flexible Java 8 solution
+
+Package `_5java8function` utilizes Java 8 method references. Previously our `ConvertedEnumResolver`
+was dependent on the existence of `ConvertedEnum` and used its method. With Java 8, you can provide
+reference to the method returning value from enum instance directly to the reverse resolver. That is
+why this time we don't use "converted" in the name, but call it `ReverseEnumResolver`.
+
+**This reverse resolution is completely separated from the JPA conversion framework now!** :-) That's why
+I didn't bother with JPA surroundings in this package. In case of JPA conversion you still have to implement
+`ConvertedEnum` if you want to use subclasses of `EnumAttributeConverter`. Alternatively you may use solution
+from package `_1encapsulated` - that is no conversion framework and just benefit from "componentized"
+reverse resolving.
+
+With this resolving you can have more (in our case two) different other representations, which was not
+possible before with a single class `ConvertedEnumResolver`.
+
 Enjoy
