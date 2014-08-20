@@ -5,6 +5,7 @@ Java enum conversion micro-framework demonstration. Focus is on the way how to m
 values and how to do it consistently. Examples are all based on JPA 2.1 converters.
 
 Full length blog story is here: http://virgo47.wordpress.com/2014/08/02/converting-java-enums-to-values-and-back/
+
 Follow-up for Java 8 solution is here: http://virgo47.wordpress.com/2014/08/20/converting-java-enums-to-values-and-back-with-java-8/
 
 ## Naive approach
